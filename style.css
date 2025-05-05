@@ -1,43 +1,148 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: rgb(247, 239, 239); */
     font-family: 'Roboto', sans-serif;
 }
 
-.wrapper{
-    width: 1136 x 402;
+.wrapper {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     min-height: 100vh;
     padding: 48px;
 }
 
-.bg-wrapper{
-  background-color: #fff;
-  display: flex;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 4px 10px rgb(245, 245, 245);
-  /* gap: 40px; */
-   /* height:360px;
-  width: 900px;  */
-  width: 1136px;
-  height: 402px;
-  /* width: 1136 x 402; */
+.bg-wrapper {
+    background-color: #fff;
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgb(245, 245, 245);
+    width: 100%;
+    max-width: 1136px;
+    /* height: auto; */
+    gap: 50px;
 }
 
-.wrapper .bg-wrapper .logo-section .sign-in-section p{
-  background-color: #ffffff;
-  font-size: 25px;
-}
-.wrapper .bg-wrapper .logo-section .sign-in-section span{
-    font-size:36px;
+.logo-section {
+    flex: 1;
 }
 
-.wrapper .bg-wrapper .logo-section .sign-in-section .text-section{
-    font-size:16px;
-    
+.logo-section .sign-in-section span {
+    font-size: 36px;
+}
+
+.logo-section .text-section p {
+    font-size: 16px;
+}
+
+.form-section {
+    flex: 1;
+    margin-top: 20px;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.form-section .forgot-email a {
+    text-decoration: none;
+    color: #0b57d0;
+}
+
+.form-section .forgot-email a:hover {
+    background-color: rgba(242, 241, 241, 0.859);
+    border-radius: 15px;
+}
+
+.learn-more a {
+    text-decoration: none;
+}
+
+.learn-more a:hover {
+    text-decoration: underline;
+}
+
+.button-section {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.create-account-btn {
+    cursor: pointer;
+    color: #0b57d0;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.create-account-btn:hover {
+    background-color: rgba(181, 181, 181, 0.5);
+    border-radius: 20px;
+}
+
+.next-btn {
+    background-color: #0b57d0;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    width: 90px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background-color: rgb(5, 5, 186);
+}
+
+
+
+@media (max-width: 992px) {
+    .bg-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .button-section {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 20px;
+    }
+
+    .logo-section .sign-in-section span {
+        font-size: 28px;
+    }
+
+    .form-section input {
+        padding: 12px;
+    }
+
+    .next-btn {
+        width: 100%;
+    }
+
+    .button-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .create-account-btn {
+        width: 100%;
+        text-align: left;
+    }
 }
