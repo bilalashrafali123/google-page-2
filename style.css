@@ -23,8 +23,8 @@
     background-color: #fff;
     display: flex;
     padding: 40px;
-    /* flex-direction: row;
-    justify-content: space-between; */
+    flex-direction: row;
+    justify-content: space-between;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgb(245, 245, 245);
     width: 100%;
